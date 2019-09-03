@@ -1,21 +1,23 @@
-available_songs = [
-  "Hello - Lionel Ritchie",
-  "Kokomo – The Beach Boys",
-  "Girl You Know It’s True – Milli Vanilli",
-  "Agadoo – Black Lace",
-  "Down Under - Men at Work",
-  "Nothing's Gonna Stop Us Now - Starship",
-  "Get Outta My Dreams, Get Into My Car - Billy Ocean",
-  "I Just Called To Say I Love You - Stevie Wonder",
-  "Hangin' Tough - New Kids on the Block",
-  "We Built This City - Starship",
-  "Wake Me Up Before You Go Go - Wham!",
-  "We Didn't Start The Fire - Billy Joel",
-  "I Wanna Dance With Somebody - Whitney Houston",
-  "U Can't Touch This - MC Hammer"
-]
+require_relative './lib/jukebox'
+require_relative './lib/song'
+require 'pry'
+song1 = Song.new("Hello", "Lionel Ritchie")
+song2 = Song.new("Sunflower", "Sway Lee")
+song3 = Song.new("Ghost", "Mystery Skulls")
+song4 = Song.new("Beer", "RBF")
+song5 = Song.new("Yesterday", "Guns and Roses")
 
-requested_songs = [
-  "Wake Me Up Before You Go Go - Wham!",
-  "She Don't Love Me Anymore - The Aliens"
-]
+available_songs = [song1, song3, song4, song5]
+
+requested_songs = [song4, song2]
+
+jukebox = Jukebox.new(available_songs, requested_songs)
+
+jukebox.add_track!(song3)
+
+puts "\noriginal playlist"
+
+jukebox.play_requested!
+jukebox.play_requested!
+jukebox.play_requested!
+jukebox.play_requested!
