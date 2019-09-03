@@ -7,7 +7,7 @@ class Jukebox
     # Your code here
   end
 
-  def play!
+  def play_requested!
     # Your code here
   end
 end
