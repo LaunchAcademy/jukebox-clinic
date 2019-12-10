@@ -1,4 +1,7 @@
-available_songs = [
+require "pry"
+require_relative "./lib/jukebox"
+
+library = [
   "Hello - Lionel Ritchie",
   "Kokomo – The Beach Boys",
   "Girl You Know It’s True – Milli Vanilli",
@@ -17,5 +20,24 @@ available_songs = [
 
 requested_songs = [
   "Wake Me Up Before You Go Go - Wham!",
-  "She Don't Love Me Anymore - The Aliens"
+  "She Don't Love Me Anymore - The Aliens",
+  "I Wanna Dance With Somebody - Whitney Houston"
 ]
+
+jukebox = Jukebox.new(library, requested_songs)
+
+puts "Original Playlist"
+puts jukebox.requested_songs
+
+jukebox.add_track!("U Can't Touch This - MC Hammer")
+
+puts "\n New Playlist"
+puts jukebox.requested_songs
+
+puts "\n\n\n"
+
+jukebox.play!
+jukebox.play!
+jukebox.play!
+jukebox.play!
+jukebox.play!
