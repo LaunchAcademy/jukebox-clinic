@@ -1,5 +1,3 @@
-require "pry"
-
 class Jukebox
   attr_reader :library, :requested_songs
 
@@ -16,13 +14,12 @@ class Jukebox
     if @library.include?(new_track)
       @requested_songs.push(new_track)
     end
-
     @library.include?(new_track)
   end
 
   def play!
-    current_song = @requested_songs.shift
-    puts "Now Playing: #{current_song}"
-    @requested_songs.push(current_song)
+    @requested_songs.each do |song|
+      song.play!
+    end
   end
 end
