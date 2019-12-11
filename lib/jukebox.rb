@@ -1,5 +1,5 @@
 class Jukebox
-  def initialize(available_songs, requested_songs)
+  def initialize(library, requested_songs)
     # Your code here
   end
 

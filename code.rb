@@ -1,4 +1,4 @@
-available_songs = [
+library = [
   "Hello - Lionel Ritchie",
   "Kokomo – The Beach Boys",
   "Girl You Know It’s True – Milli Vanilli",
