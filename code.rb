@@ -15,7 +15,7 @@ library = [
   "U Can't Touch This - MC Hammer"
 ]
 
-requested_songs = [
+song_requests = [
   "Wake Me Up Before You Go Go - Wham!",
   "She Don't Love Me Anymore - The Aliens"
 ]
