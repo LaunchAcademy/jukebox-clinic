@@ -1,3 +1,7 @@
+require "pry"
+
+require_relative "./lib/jukebox"
+
 library = [
   "Hello - Lionel Ritchie",
   "Kokomo – The Beach Boys",
@@ -17,5 +21,26 @@ library = [
 
 song_requests = [
   "Wake Me Up Before You Go Go - Wham!",
+  "Get Outta My Dreams, Get Into My Car - Billy Ocean",
+  "We Built This City - Starship",
   "She Don't Love Me Anymore - The Aliens"
 ]
+
+jukebox = Jukebox.new(library, song_requests)
+
+puts "Original Playlist"
+puts jukebox.playlist
+
+jukebox.add_track_to_playlist!("Hello - Lionel Ritchie")
+
+puts "\n\nNew Playlist"
+puts jukebox.playlist
+
+puts "\n\n\n"
+
+jukebox.start_playlist!
+jukebox.start_playlist!
+jukebox.start_playlist!
+jukebox.start_playlist!
+jukebox.start_playlist!
+# binding.pry
