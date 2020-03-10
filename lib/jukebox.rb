@@ -19,8 +19,14 @@ class Jukebox
   end
 
   def start_playlist!
-    current_song = @playlist.shift
-    puts "Now Playing: #{current_song}"
-    @playlist << current_song
+    @playlist.each do |song|
+      song.play_song!
+    end
+  end
+
+  def show_playlist
+    @playlist.each do |song|
+      puts song.full_name
+    end
   end
 end
