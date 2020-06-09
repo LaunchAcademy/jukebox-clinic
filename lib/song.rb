@@ -11,7 +11,6 @@ class Song
 
   def play_song!
     @play_count += 1
-    # binding.pry
     puts "\n#{full_name} has been played #{@play_count} times!\n"
   end
 end
